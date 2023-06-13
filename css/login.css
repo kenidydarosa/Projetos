@@ -1,0 +1,148 @@
+@charset "UTF8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--cor-fundo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: var(--cor-main);
+  width: 350px;
+  min-width: 300px;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+form .row {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 0 30px;
+  background-color: var(--cor-caixas);
+  border-radius: 30px;
+}
+
+form .logo {
+  background-color: var(--cor-fundo);
+  height: 45px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+form img {
+  width: 230px;
+  margin: 0 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--cor-caixas);
+  color: var(--cor-texto);
+  font-size: 0.8em;
+  border-radius: 30px;
+  border: none;
+}
+
+.text::placeholder{
+color: var(--cor-textoInativo);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+form input[type="button"] {
+  background-color: var(--cor-fundo);
+  color: var(--cor-main);
+  transition-duration: var(--tempoTransicao);;
+}
+
+form input[type="button"]:hover {
+  background-color: var(--cor-botao);
+  cursor: pointer;
+}
+
+form .icon {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  left: 12px;
+  color: var(--cor-fundo);
+}
+
+#EsqueceuSenha {
+  margin: 20px auto 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: var(--cor-texto);
+}
+
+#EsqueceuSenha>a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor-texto);
+
+}
+
+#EsqueceuSenha>a:hover {
+  color: rgb(66, 66, 66);
+}
+
+#caixa_checkbox {
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 30px;
+  font-size: 0.8em;
+  color: var(--cor-texto);
+}
+
+#check {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  /* appearance: none; */
+  border-radius: 2px;
+  border: solid 1px var(--cor-texto);
+}
+
+#check:checked {
+  background-color: var(--cor-fundo);
+
+}
+
+#check:hover {
+  background-color: rgb(109, 139, 190);
+  cursor: pointer;
+}
+.mostrar{
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  left:86%;
+  color: var(--cor-textoInativo);
+  transition-duration: var(--tempoTransicao);
+  cursor: pointer;
+}
+.mostrar:hover{
+  color: var(--cor-texto);
+}

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acompanhamento de Projetos - Projetos</title>
+  <link rel="stylesheet" href="css/projetos.css" />
+  <link rel="stylesheet" href="css/variaveis.css" />
+  <link rel="shortcut icon" href="img/favIcon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="fundoEscuroCadastro" class="fundoEscuro">
+    <form id="cadastroCliente">
+      <div id="fundoForm">
+        <header>
+          <h4>Cadastro de Projetos</h4>
+        </header>
+        <main id="mainCadastro">
+          <div id="pagina1">
+            <div id="tituloCadastro">
+              <h5>Dados cliente</h5>
+            </div>
+            <div id="camposCadastro">
+              <section id="secao1">
+                <div id="col1CadastroPag1" class="col">
+                  <input id="numSV" placeholder="Num SV" type="text" />
+                  <input id="dimensoes" placeholder="Dimensoes" type="text" />
+                  <input id="qtd" placeholder="Quantidade" type="text" />
+                  <input placeholder="Orc. Solicitado" type="text" onfocus="(this.type='date')"
+                    onblur="alteraFormato(this)" id="orc.Solicitado">
+                </div>
+                <div id="col2CadastroPag2" class="col">
+                  <input id="nomeCliente" placeholder="Cliente" type="text" />
+                  <select name="gerente" id="gerente">
+                    <option value="gerente" disabled selected hidden>Gerente</option>
+                    <option value="Elio">Elio</option>
+                    <option value="Edegar">Edegar</option>
+                    <option value="Daniel">Daniel</option>
+                    <option value="Deivid">Deivid</option>
+                    <option value="Gabriela">Gabriela</option>
+                    <option value="Gustavo">Gustavo</option>
+                    <option value="Lorena">Lorena</option>
+                    <option value="Renato">Renato</option>
+                  </select>
+                  <select name="tipo" id="tipo">
+                    <option value="Tipo" disabled selected hidden>Tipo</option>
+                    <option value="Frango de Corte">Frango de Corte</option>
+                    <option value="Frango de Corte">Postura</option>
+                    <option value="Frango de Corte">Produção</option>
+                    <option value="Frango de Corte">Recria</option>
+                    <option value="Frango de Corte">Suinocultura</option>
+                  </select>
+                  <input id="orc.Enviado" onfocus="(this.type='date')" onblur="alteraFormato(this)"
+                    placeholder="Orc. Enviado" type="text" />
+                </div>
+                <div id="col3CadastroPag3" class="col">
+                  <!-- <input id="integradora" placeholder="Integradora" type="text" /> -->
+                  <select name="integradora" id="integradora">
+                    <option value="BRF" disabled selected hidden>Integradora</option>
+                    <option value="BRF">BRF</option>
+                    <option value="JBS">JBS</option>
+                    <option value="GT-Food's">BRF</option>
+                  </select>
+                  <input id="representante" placeholder="Representante" type="text" />
+                  <input id="valor" placeholder="Valor" type="text" />
+                  <select name="status" id="status">
+                    <option value="Status" disabled selected hidden>Status</option>
+                    <option value="orçamento">Orçamento</option>
+                    <option value="cancelado">Cancelado</option>
+                    <option value="aprovado">Aprovado</option>
+                  </select>
+                </div>
+              </section>
+              <section id="secao2">
+                <div id="AnexoCadastrar">
+                  <span class="material-icons-outlined">
+                    add_photo_alternate
+                  </span>
+                </div>
+                <div id="ObsCadastrar">
+                  <textarea name="" id="" placeholder="Observações" cols="30" rows="10"></textarea>
+                </div>
+                <div id="botoes">
+                  <div id="btnConfirCancel">
+                    <div id="confirmarCadastro" class="btn">Confirmar</div>
+                    <div id="cancelarCadastro" class="btn"
+                      onclick="escondeElemento('fundoEscuroCadastro','cadastroCliente')">Cancelar</div>
+                  </div>
+                  <a href="#pagina2">
+                    <div id="next">
+                      <span class="material-icons-outlined">
+                        arrow_forward
+                      </span>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div id="pagina2">
+            <div id="tituloCadastro">
+              <h5>Etapas</h5>
+            </div>
+            <div id="blocoDadosPag2">
+              <div id="col1CadastroPag2" class="col">
+                <input placeholder="Orc. Aprovado" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+                <input placeholder="Projeto Aprovado" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+                <input placeholder="Estrutura Recebida" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+              </div>
+              <div id="col2CadastroPag2" class="col">
+                <input placeholder="Dox Criado" type="text" onfocus="(this.type='date')" onblur="alteraFormato(this)">
+                <input placeholder="Contrato Enviado" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+                <input placeholder="Pedido Importado" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+              </div>
+              <div id="col3CadastroPag2" class="col">
+                <input placeholder="Projeto Enviado" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+                <input placeholder="Contrato Recebido" type="text" onfocus="(this.type='date')"
+                  onblur="alteraFormato(this)">
+                <input placeholder="Programado" type="text" onfocus="(this.type='date')" onblur="alteraFormato(this)">
+              </div>
+            </div>
+            <div id="tituloCadastro">
+              <h5>Progresso</h5>
+            </div>
+            <div id="progressoTotal">
+              <div id="progressBar">
+                <span id="percent">
+                  50%
+                </span>
+              </div>
+            </div>
+
+            <a href="#pagina1">
+              <div id="back">
+                <span class="material-icons-outlined">
+                  arrow_back
+                </span>
+              </div>
+            </a>
+          </div>
+        </main>
+      </div>
+    </form>
+  </div>
+
+  <section id="ComboFixo">
+    <header id="cabecalhoProjeto">
+      <div class="logo">
+        <img id="logo" src="img/logo2.png" alt="logo" />
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="#">
+            <span class="material-icons"> home </span> Projetos
+          </a>
+        </li>
+        <li>
+          <a href="dashboard.html">
+            <span class="material-icons"> equalizer </span> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="login.html">
+            <span class="material-icons"> meeting_room </span>Sair
+          </a>
+        </li>
+      </ul>
+      <div id="comboBuscar">
+        <div id="comboFiltro">
+          <div id="fundoFiltro" onclick="escondeElemento('','filtroGerentes')">
+            <span class="material-icons"> list </span>
+            <div id="filtroGerentes">
+              <div>
+                <div class="Combocheck">
+                  <input id="Elio" type="checkbox" checked />
+                  <label for="Elio">Elio</label>
+                </div>
+                <div class="Combocheck">
+                  <input id="Edegar" type="checkbox" checked />
+                  <label for="Edegar">Edegar</label>
+                </div>
+                <div class="Combocheck">
+                  <input id="Deivid" type="checkbox" checked />
+                  <label for="Deivid">Deivid</label>
+                </div>
+                <div class="Combocheck">
+                  <input id="Daniel" type="checkbox" checked />
+                  <label for="Daniel">Daniel</label>
+                </div>
+              </div>
+              <div>
+                <div class="Combocheck">
+                  <input id="Gabriela" type="checkbox" checked />
+                  <label for="Gabriela">Gabriela</label>
+                </div>
+                <div class="Combocheck">
+                  <input id="Gustavo" type="checkbox" checked />
+                  <label for="Gustavo">Gustavo</label>
+                </div>
+                <div class="Combocheck">
+                  <input id="Lorena" type="checkbox" checked />
+                  <label for="Lorena">Lorena</label>
+                </div>
+                <div class="Combocheck">
+                  <input id="Renato" type="checkbox" checked />
+                  <label for="Renato">Renato</label>
+                </div>
+                <div id="OkFiltro">Ok</div>
+              </div>
+            </div>
+          </div>
+          <div class="pesquisar">
+            <span class="material-icons"> search </span>
+            <input type="text" placeholder="Pesquisar..." />
+          </div>
+        </div>
+        <div id="fundoIniciais">
+          <div id="Iniciais">KR</div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div id="Titulo" class="caixa">
+        <span>Gerenciamento de Projetos</span>
+      </div>
+      <div id="icones" class="caixa">
+        <a href="timeLine.html" target="_self">
+          <div class="circle" id="visualizarDados">
+            <span class="material-icons"> exit_to_app </span>
+          </div>
+        </a>
+        <div class="circle">
+          <span class="material-icons" onclick="escondeElemento('fundoEscuroCadastro','cadastroCliente')"> post_add
+          </span>
+        </div>
+        <div class="circle">
+          <span class="material-icons"> drive_file_rename_outline </span>
+        </div>
+        <div class="circle">
+          <span class="material-icons"> delete_outline </span>
+        </div>
+        <div class="circle">
+          <span class="material-icons"> autorenew </span>
+        </div>
+      </div>
+      <div id="Separa">
+        <div class="qtd caixa">Orçamentos: 66</div>
+        <div class="qtd caixa">Pedidos: 30</div>
+        <div class="qtd caixa">Índice: 46%</div>
+        <div class="qtd caixa Valor">Valor: R$106.550.000,00</div>
+      </div>
+    </nav>
+  </section>
+
+  <section id="fundoTabela">
+    <table id="tabelaProjetos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>N° SV</th>
+          <th>Cliente</th>
+          <th>Integradora</th>
+          <th>Dimensoes</th>
+          <th>Qtd</th>
+          <th>Tipo</th>
+          <th>Gerente</th>
+          <th>Representante</th>
+          <th>Orç. Solicitado</th>
+          <th>Orç. Enviado</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td class="emoji circ">
+            <span class="material-icons circ"> circle </span>
+          </td>
+          <td>20230110-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>4</td>
+          <td>Frango de Corte</td>
+          <td>Edegar</td>
+          <td>Bazzo</td>
+          <td>13/05/2023</td>
+          <td>15/05/2023</td>
+          <td>R$1.350.000,00</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td class="emoji circ">
+            <span class="material-icons"> circle </span>
+          </td>
+          <td>20230115-01</td>
+          <td>João Rodrigues</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Wiliam Gava</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined cancel"> cancel </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Tuany Lucietti</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined cancel"> cancel </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Luiz Henrique</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Deivid Machado</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Rejane Andrade</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Elio Gobetti</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Daniel Silva</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Luiz Tiskoski</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="emoji confir">
+            <span class="material-icons circ"> circle </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kainan Marcelino</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Eduardo Silveira</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Wagner Brocca</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Risamar de Brida</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Lucas Pola</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Eduardo Dassi</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Robson Mendes</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Lorena Gallardo</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kettilen Cardoso</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Roberto Mesquita Melo</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Marcelo Dias Lopes</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Plasson México</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Plasson do Brasil</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td class="emoji confir">
+            <span class="material-icons-outlined confir"> task_alt </span>
+          </td>
+          <td>20230115-01</td>
+          <td>Kenidy da Rosa</td>
+          <td>JBS</td>
+          <td>165X18X2,5M</td>
+          <td>2</td>
+          <td>Frango de Corte</td>
+          <td>Gustavo</td>
+          <td>Nortec</td>
+          <td>20/05/2023</td>
+          <td>21/05/2023</td>
+          <td>R$750.000,00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <script type="text/javascript" src="./js/JavaScript.js"></script>
+</body>
+
+</html>

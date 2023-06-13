@@ -1,0 +1,21 @@
+@charset "UTF";
+:root {
+    --cor-body: rgb(241, 241, 241);
+    --cor-caixas: rgb(228, 230, 233);
+    --cor-fundo: rgb(83, 117, 177);
+    --cor-botao2: rgba(83, 117, 177, 0.781);
+    --cor-botao: rgb(192, 209, 238);
+    --cor-main: white;
+    --sombra-caixas: 0px 2px 4px 0px rgba(172, 167, 167, 0.342);
+    --sombra-forms: 1px 3px 6px rgba(0, 0, 0, 0.4);
+    --cor-texto: rgb(112, 111, 111);
+    --cor-textoInativo: rgb(196, 191, 191);
+    --cor1:rgb(17,111,160);
+    --cor2:rgb(31,78,121);
+    --cor3:rgb(83,117,177);
+    --cor4:rgb(123,149,195);
+    --corConfirm: rgb(24, 151, 209);
+    --corCheck:  rgb(24, 184, 96);
+    --corCancel:  rgb(250, 123, 123);
+    --tempoTransicao: 0.5s
+  }
