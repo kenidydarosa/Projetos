@@ -576,3 +576,9 @@ img {
     width: 110px;
   }
 }
+@media (max-width: 450px) {
+  #blocoGeral{
+    max-width: 350px;
+    width: 580px;
+   }
+ }
