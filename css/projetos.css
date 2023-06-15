@@ -41,7 +41,7 @@ header {
   z-index: 100;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 #mainCadastro {
   width: 500px;
@@ -81,6 +81,7 @@ strong {
   color: var(--cor-texto);
 }
 #ObsCadastrar {
+  width: 100%;
   background-color: transparent;
   border: none;
   border-radius: 4px;
@@ -89,7 +90,7 @@ strong {
 #ObsCadastrar > textarea {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: var(--cor-texto);
-  width: 460px;
+  width: 100%;
   height: 70px;
   margin: 0px 15px;
   resize: none;
@@ -116,26 +117,7 @@ strong {
 .col input[type="date"] {
   font-family: "Roboto";
 }
-#progressoTotal {
-  margin-top: 15px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: lightgrey;
-}
-#progressBar {
-  height: 6px;
-  background-color: var(--cor-fundo);
-  width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  transition-duration: 1s;
-  border-radius: 3px;
-}
 
-#progressBar:hover {
-  background-color: var(--cor-botao2);
-}
 #borderTruck{
   display: flex;
   text-align: center;
@@ -166,6 +148,7 @@ strong {
 select {
   font-family: "Roboto";
   height: 16px;
+  width: 145px;
   padding: 5px;
   margin: 12px 5px;
   font-size: 0.8em;
@@ -245,7 +228,26 @@ select {
 #back > span:hover {
   color: var(--cor-fundo);
 }
+#progressoTotal {
+  margin-top: 15px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: lightgrey;
+}
+#progressBar {
+  height: 6px;
+  background-color: var(--cor-fundo);
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  transition-duration: 1s;
+  border-radius: 3px;
+}
 
+#progressBar:hover {
+  background-color: var(--cor-botao2);
+}
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
@@ -669,6 +671,25 @@ span.material-icons-outlined {
   thead {
     top: 170px;
   }
+  #mainCadastro,  #secao1{
+    width: 350px;
+  }
+  #secao1,#secao2 {
+    display: block;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #col1CadastroPag1,#col2CadastroPag2,#col3CadastroPag3{
+    display: inline-flex; 
+  }
+
+  #ObsCadastrar>textarea{
+    width: 300px;
+  }
+.col input,#gerente,
+select {
+    width: 90px;
+}
 }
 @media (max-width: 575px) {
   #cabecalhoProjeto {
@@ -755,3 +776,4 @@ span.material-icons-outlined {
     width: 150px;
   }
 }
+
