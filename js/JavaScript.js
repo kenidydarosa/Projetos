@@ -94,29 +94,29 @@ function escondeElemento(div1, div2) {
   }
 }
 
-// função pra ler querystring
-function queryString(parameter) {  
-  var loc = location.search.substring(1, location.search.length);   
-  var param_value = false;   
-  var params = loc.split("&");   
-  for (i=0; i<params.length;i++) {   
-      param_name = params[i].substring(0,params[i].indexOf('='));   
-      if (param_name == parameter) {                                          
-          param_value = params[i].substring(params[i].indexOf('=')+1)   
-      }   
-  }   
-  if (param_value) {   
-      return param_value;   
-  }   
-  else {   
-      return undefined;   
-  }   
-}
-var mudaIniciais = function (valor){
-  window.location.href = "projetos.html?iniciaisUsuario =" + valor;
-  // document.getElementById("Iniciais").innerHTML = iniciais;
-}
-var variavel = queryString("minhaVariavel");
+// // função pra ler querystring
+// function queryString(parameter) {  
+//   var loc = location.search.substring(1, location.search.length);   
+//   var param_value = false;   
+//   var params = loc.split("&");   
+//   for (i=0; i<params.length;i++) {   
+//       param_name = params[i].substring(0,params[i].indexOf('='));   
+//       if (param_name == parameter) {                                          
+//           param_value = params[i].substring(params[i].indexOf('=')+1)   
+//       }   
+//   }   
+//   if (param_value) {   
+//       return param_value;   
+//   }   
+//   else {   
+//       return undefined;   
+//   }   
+// }
+// var mudaIniciais = function (valor){
+//   window.location.href = "projetos.html?iniciaisUsuario =" + valor;
+//   // document.getElementById("Iniciais").innerHTML = iniciais;
+// }
+// var variavel = queryString("minhaVariavel");
 
 /*Valida Login*/
 function validaLogin() {
@@ -129,7 +129,8 @@ function validaLogin() {
     var secLetra = vetIniciais[1].substring(1, 0);
     var iniciais = priLetra + secLetra;
     // 
-    mudaIniciais(iniciais) ;   // const janelaDestino = window.open('projetos.html',"_blank");
+    window.location.href = "projetos.html";
+    // mudaIniciais(iniciais) ;   // const janelaDestino = window.open('projetos.html',"_blank");
   }
   else {
     alert("Usuario ou senha incorretos!");
