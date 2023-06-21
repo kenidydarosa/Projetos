@@ -1,80 +1,38 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>
-    Chart
-  </title>
-  <style>
-    body {
-      background-color: #383735;
-      display: flex;
-      align-items: center;
-    }
-    #plots {
-      margin: auto;
-      background-color: #ffffff;
-      display: flex;
-    }
-    #legenda{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.5em;
-      z-index: 2;
-      padding: 0;
-      left: -8;
-      width: 100%;
-      text-align: center;
-      position: absolute;
-    }
-
-  </style>
-  <!-- <link rel="stylesheet" href="index.css"> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<style>
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
 
 <body>
-  <header>
-  </header>
-  <div id="legenda">70%</div>
-  <canvas id="plots" style="max-width:200px"></canvas>
+
+  <button id="mensagem" onclick="sweetalert2('success','teste','testando')">
+    Exibir mensagem
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   <script>
-    // Get the HTML canvas by its id 
-    plots = document.getElementById("plots");
-    // Example datasets for X and Y-axes 
-    var months = ["Progresso", "Pendente"]; //Stays on the X-axis 
-    var traffic = [70, 30] //Stays on the Y-axis 
-    // Create an instance of Chart object:
-    new Chart(plots, {
-      type: 'doughnut', //Declare the chart type 
-      data: {
-        labels: months, //X-axis data 
-        datasets: [{
-          data: traffic, //Y-axis data 
-          backgroundColor: [
-            "rgb(83,117,177)",
-            "lightgrey",
-          ],
-          // '#22888b'
-          borderWidth: 0,
-          borderColor: 'white',
-          fill: true,
-        }],
-      },
-      options: {
-        cutoutPercentage: 88,
-        // tooltips: {
-        //   mode: 'index',
-        //   intersect: true,
-        //   titleMarginBottom: 10,
-        // },
-        layout: {
-          padding: 5,
-        },
-        legend: {
-          display: false,
-        },
-      },
-    });
+    function sweetalert2(icon,title,text) {
+      swal.fire({
+        icon: icon,
+        title: title,
+        text: text,
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        // confirmButtonText: 'Sim, tenho certeza!',
+        // cancelButtonText: 'Melhor eu parar...'
+      })
+    }
   </script>
 </body>
-</htm />
+
+</html>

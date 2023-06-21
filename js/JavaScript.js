@@ -43,7 +43,8 @@ function selLinha(linha, multiplos) {
 
 /**
 Exemplo de como capturar os dados
-**/
+*/
+
 var btnVisualizar = document.getElementById("visualizarDados");
 btnVisualizar.addEventListener("click", function () {
   var selecionados = tabela.getElementsByClassName("selecionado");
@@ -71,8 +72,9 @@ btnVisualizar.addEventListener("click", function () {
       selecionado[7].innerHTML +
       "\n";
   }
-
-  alert(dados);
+  // sweetalert2('success','Item selecionado',`Você clicou em ${dados}`)
+  // alert(dados);
+  window.location.href = "timeLine.html"
 });
 
 
@@ -129,10 +131,26 @@ function validaLogin() {
     var secLetra = vetIniciais[1].substring(1, 0);
     var iniciais = priLetra + secLetra;
     // 
-    window.location.href = "projetos.html";
-    // mudaIniciais(iniciais) ;   // const janelaDestino = window.open('projetos.html',"_blank");
+    // mudaIniciais(iniciais)
+    window.location.href = "projetos.html" ;   // const janelaDestino = window.open('projetos.html',"_blank");
   }
   else {
     alert("Usuario ou senha incorretos!");
   }
 }
+
+
+
+// document.getElementById("btnConfirm").addEventListener("click",sweetalert2('success','testando','teste'))
+// function sweetalert2(icon,title,text) {
+//   swal.fire({
+//     icon: icon,
+//     title: title,
+//     text: text,
+//     showCancelButton: false,
+//     confirmButtonColor: '#3085d6',
+//     cancelButtonColor: '#d33',
+//     // confirmButtonText: 'Sim, tenho certeza!',
+//     // cancelButtonText: 'Melhor eu parar...'
+//   })
+// }
