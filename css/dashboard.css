@@ -335,9 +335,6 @@ foreignObject {
   #blocoHeader {
     flex-wrap: wrap;
   }
-  /* #corpoDashboard {
-    width: 80vw;
-  }*/
 } 
 @media (max-width: 828px) {
   #blocoFundos1e2 {
@@ -357,15 +354,7 @@ foreignObject {
 }
 
 @media (max-width: 440px) {
-  /* #bloco1-header{
-    flex-wrap: wrap;
-    display: inline-flex;
-  }
-  #bloco2-header{
-    flex-wrap: wrap;
-    display: inline-flex;
 
-  } */
   .icoCabecalho{
     margin:0;
     margin-left: 5px;
